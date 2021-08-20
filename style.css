@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --orange: hsl(31, 77%, 52%);
+    --cyan: hsl(184, 100%, 22%);
+    --darkcyan: hsl(179, 100%, 13%);
+    --offw:hsl(0, 0%, 100%, 0.75);
+    --whi:hsla(0, 0%, 95%);
+}
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+.sedan{
+    grid-area: sedan;
+    background-color: var(--orange);
+}
+.suv{
+    grid-area: suv;
+    background-color: var(--cyan);
+}
+
+.luxury{
+    grid-area: luxury;
+    background-color: var(--darkcyan);
+}
+
+main{
+    display: grid;
+}
+
+h1{
+    font-family: 'Big Shoulders Display', cursive;
+    color:var(--whi);
+}
+
+p{
+    font-family: 'Lexend Deca', sans-serif;
+    color:var(--offw);
+    font-size: 13px;
+    line-height: 20px;
+}
+
+button{
+    background-color: white;
+    border-style: solid;
+    border-color: white;
+    padding: 11px 24px;
+    border-radius: 20px;
+}
+
+.btn1{ color: var(--orange);}
+.btn2{ color: var(--cyan);}
+.btn3{ color: var(--darkcyan);}
+
+.btn1:hover{
+    background-color: var(--orange);
+    color: white;
+}
+
+.btn2:hover{
+    background-color: var(--cyan);
+    color: white;
+}
+
+.btn3:hover{
+    background-color: var(--darkcyan);
+    color: white;
+}
+@media(max-width:600px){
+    main{
+        grid-template-areas: 'sedan'
+                    'suv'
+                    'luxury';
+         width: fit-content;
+         margin: auto;
+         padding: 20vh 0;
+    }
+    .car{
+        width: 200px;
+        padding: 36px;
+        height: 300px;
+    }
+
+    .sedan{
+        border-radius: 8px 8px 0 0;
+    }
+    
+    .luxury{
+        border-radius: 0 0 8px 8px;
+    }
+
+    button{
+        margin-top: 10px;
+    }
+}
+
+@media(min-width:601px){
+    main{
+        grid-template-areas: 'sedan suv luxury';
+        width: fit-content;
+        margin: auto;
+        padding: 24vh 0;
+    }
+
+    .car{
+        max-width: 200px;
+        height: 340px;
+        padding: 50px;
+    }
+
+    button{
+        margin-top: 60px;
+    }
+
+    .sedan{
+        border-radius: 8px 0 0 8px;
+    }
+
+    .luxury{
+        border-radius: 0 8px 8px 0;
+    }
+}
