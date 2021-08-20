@@ -24,8 +24,12 @@
     background-color: var(--darkcyan);
 }
 
+body{
+    background-color: var(--whi);
+}
+
 main{
-    display: flex;
+    display: grid;
 }
 
 h1{
@@ -68,7 +72,9 @@ button{
 }
 @media(max-width:600px){
     main{
-        flex-direction: column;
+        grid-template-areas: 'sedan'
+                    'suv'
+                    'luxury';
          width: fit-content;
          margin: auto;
          padding: 20vh 0;
@@ -94,15 +100,14 @@ button{
 
 @media(min-width:601px){
     main{
-        flex-direction: row;
-        width: fit-content;
-        margin: auto;
-        padding: 24vh 0;
+        grid-template-areas: 'sedan suv luxury';
+       
+        padding: 24vh 27vw;
     }
 
     .car{
         max-width: 200px;
-        height: 340px;
+        min-height: 340px;
         padding: 50px;
     }
 
